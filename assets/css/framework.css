@@ -1,0 +1,307 @@
+/* RESET */
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  left: 0;
+  top: 0;
+  font-size: 100%;
+}
+* {
+  -webkit-box-sizing: border-box;
+     -moz-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+/* ROOT FONT STYLES */
+* {
+  font-family: 'OpenSans', Helvetica, sans-serif;
+  color: #333;
+  line-height: 1.5;
+}
+
+/* TYPOGRAPHY */
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.375rem;
+}
+
+h4 {
+  font-size: 1.125rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h6 {
+  font-size: 0.875rem;
+}
+
+p {
+  font-size: 1.125rem;
+  font-weight: 200;
+  line-height: 1.8;
+}
+
+.font-light {
+  font-weight: 300;
+}
+
+.font-regular {
+  font-weight: 400;
+}
+
+.font-heavy {
+  font-weight: 700;
+}
+
+/* POSITIONING */
+.t-left {
+  text-align: left;
+}
+
+.t-right {
+  text-align: right;
+}
+
+.t-center {
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.t-justify {
+  text-align: justify;
+}
+
+.f-right {
+  float: right !important;
+}
+.f-left {
+  float: left !important;
+}
+.f-none {
+  float: none !important;
+}
+
+/* DISPLAY */
+.d-b {
+  display: block;
+}
+
+.d-i {
+  display: inline;
+}
+
+.d-ib {
+  display: inline-block;
+}
+
+/* MARGIN - PADDING */
+.ml3,
+.mx3,
+.m3 {
+  margin-left: 50px;
+}
+.mr3,
+.mx3,
+.m3 {
+  margin-right: 50px;
+}
+.mt3,
+.my3,
+.m3 {
+  margin-top: 50px;
+}
+.mb3,
+.my3,
+.m3 {
+  margin-bottom: 50px;
+}
+
+.ml2,
+.mx2,
+.m2 {
+  margin-left: 30px;
+}
+.mr2,
+.mx2,
+.m2 {
+  margin-right: 30px;
+}
+.mt2,
+.my2,
+.m2 {
+  margin-top: 30px;
+}
+.mb2,
+.my2,
+.m2 {
+  margin-bottom: 30px;
+}
+
+.ml1,
+.mx1,
+.m1 {
+  margin-left: 15px;
+}
+.mr1,
+.mx1,
+.m1 {
+  margin-right: 15px;
+}
+.mt1,
+.my1,
+.m1 {
+  margin-top: 15px;
+}
+.mb1,
+.my1,
+.m1 {
+  margin-bottom: 15px;
+}
+
+.ml0,
+.mx0,
+.m0 {
+  margin-left: 0 !important;
+}
+.mr0,
+.mx0,
+.m0 {
+  margin-right: 0 !important;
+}
+.mt0,
+.my0,
+.m0 {
+  margin-top: 0 !important;
+}
+.mb0,
+.my0,
+.m0 {
+  margin-bottom: 0 !important;
+}
+
+.pl3,
+.px3,
+.p3 {
+  padding-left: 50px;
+}
+.pr3,
+.px3,
+.p3 {
+  padding-right: 50px;
+}
+.pt3,
+.py3,
+.p3 {
+  padding-top: 50px;
+}
+.pb3,
+.py3,
+.p3 {
+  padding-bottom: 50px;
+}
+
+.pl2,
+.px2,
+.p2 {
+  padding-left: 30px;
+}
+.pr2,
+.px2,
+.p2 {
+  padding-right: 30px;
+}
+.pt2,
+.py2,
+.p2 {
+  padding-top: 30px;
+}
+.pb2,
+.py2,
+.p2 {
+  padding-bottom: 30px;
+}
+
+.pl1,
+.px1,
+.p1 {
+  padding-left: 15px;
+}
+.pr1,
+.px1,
+.p1 {
+  padding-right: 15px;
+}
+.pt1,
+.py1,
+.p1 {
+  padding-top: 15px;
+}
+.pb1,
+.py1,
+.p1 {
+  padding-bottom: 15px;
+}
+
+.pl0,
+.px0,
+.p0 {
+  padding-left: 0 !important;
+}
+.pr0,
+.px0,
+.p0 {
+  padding-right: 0 !important;
+}
+.pt0,
+.py0,
+.p0 {
+  padding-top: 0 !important;
+}
+.pb0,
+.py0,
+.p0 {
+  padding-bottom: 0 !important;
+}
+
+.b-radius-3 {
+  -webkit-border-radius: 10px;
+     -moz-border-radius: 10px;
+          border-radius: 10px;
+}
+.b-radius-2 {
+  -webkit-border-radius: 5px;
+     -moz-border-radius: 5px;
+          border-radius: 5px;
+}
+.b-radius-1 {
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+}
+.b-radius-0 {
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+a {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: underline;
+}
+
+@import url('font.css');

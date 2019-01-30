@@ -1,0 +1,25 @@
+/* GENERAL */
+.btn-icon {
+    width: 30px;
+    height: 30px;
+    padding: 25px;
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    background-color: #e6effa;
+}
+.btn-icon.gear {
+    background-image: url('../image/black-settings-button.svg');
+}
+.btn-icon.bell {
+    background-image: url('../image/notification-bell.svg');
+}
+
+/* HEADER */
+.top-links .link {
+    font-size: 1rem;
+    line-height: 2rem;
+    color: #777;
+}
+.header .top-wrapper {
+    border-bottom: 1px solid #eef2f6;
+}
