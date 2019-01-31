@@ -1,7 +1,8 @@
 /* GENERAL */
 .btn-icon {
-    width: 30px;
-    height: 30px;
+    /* width: 30px;
+    height: 30px; */
+    display: inline-block;
     padding: 25px;
     background-repeat: no-repeat;
     background-position: 50% 50%;
@@ -22,7 +23,7 @@
     line-height: 2rem;
     color: #676e8a;
 }
-.header .top-wrapper {
+.header .border {
     border-bottom: 1px solid #eef2f6;
 }
 .header .logo {
@@ -54,6 +55,10 @@
 }
 .header .navigation a {
     text-transform: uppercase;
+    text-decoration: none;
+}
+.header .navigation a:hover {
+    color: yellow
 }
 
 /* MINI SEARCH */
@@ -68,4 +73,18 @@
     right: 0;
     background-image: url('../image/zoeken.png');
     padding: 22px;
+}
+
+/* MAIN AREA */
+/* BOX */
+.main .box {
+    width: 100%;
+    border: 1px solid #d8e2ee;
+
+}
+.btn-icon.e-link {
+    background-image: url('../image/external-link\ 3.png')
+}
+.box .title {
+    color: #ff9500;
 }

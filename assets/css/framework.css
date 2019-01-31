@@ -22,6 +22,10 @@ body {
   line-height: 1.5;
 }
 
+.outline {
+  outline: 1px solid red;
+}
+
 /* TYPOGRAPHY */
 h1 {
   font-size: 2.5rem;
