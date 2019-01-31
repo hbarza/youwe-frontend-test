@@ -6,6 +6,8 @@
     background-repeat: no-repeat;
     background-position: 50% 50%;
     background-color: #e6effa;
+    cursor: pointer;
+    border: 0 none;
 }
 .btn-icon.gear {
     background-image: url('../image/black-settings-button.svg');
@@ -16,10 +18,54 @@
 
 /* HEADER */
 .top-links .link {
-    font-size: 1rem;
+    font-size: .9rem;
     line-height: 2rem;
-    color: #777;
+    color: #676e8a;
 }
 .header .top-wrapper {
     border-bottom: 1px solid #eef2f6;
+}
+.header .logo {
+    text-decoration: none;
+}
+.header .logo img {
+    width: 4.3rem;
+    margin-right: 5px;
+}
+.header .logo h1 {
+    font-size: 1.2rem;
+    font-weight: lighter;
+}
+.header .logo h1 .name {
+    font-weight: bold;
+}
+.header .logo h1 .slogan {
+    font-size: .9rem
+}
+.header .logo .interanet {
+    font-size: 1.5rem;
+    font-weight: bolder;
+    line-height: 1.7rem;
+}
+
+/* MENU */
+.header .nav {
+    background: #ae009b;
+}
+.header .navigation a {
+    text-transform: uppercase;
+}
+
+/* MINI SEARCH */
+#header_search {
+    position: relative;
+}
+#header_search .input-field {
+    height: 44px;
+}
+#header_search .search {
+    position: absolute;
+    right: 0;
+    background-image: url('../image/zoeken.png');
+    padding: 22px;
 }

@@ -13,9 +13,9 @@
     <link href="assets/css/style.css" rel="stylesheet">
 </head>
 <body id="home_page" class="index home">
-    <div class="container">
+    <div class="page-wrapper">
         <header class="header">
-            <section class="header-top">
+            <section class="header-top container">
                 <div class="row top-wrapper">
                     <div class="col-10 mb0 ml0">
                         <nav class="top-links">
@@ -33,10 +33,34 @@
                     </div>
                 </div>
             </section>
-            <section class="header-main"></section>
-            <nav class="navigation"></nav>
+            <section class="header-main container">
+                <div class="logo-wrapper col-6 mt1 mb1">
+                    <a href="/" class="logo flex-item d-f f-align-bottom f-justify-left">
+                        <img src="assets/image/Bitmap.png"/>
+                        <h1 class="m0"><span class="name">Cura</span>Nu <span class="d-b slogan">Zorg en welzijn</span></h1>
+                        <span class="interanet d-ib mx2">Interanet</span>
+                    </a>
+                </div>
+            </section>
+            <section class="nav">
+                <nav class="container navigation row my2 p1 pr0">
+                    <ul class="menu col-8 mx0">
+                        <li class="py1 px2 d-ib pl0"><a href="#" class="text-white font-bold">Artikelen</a></li>
+                        <li class="py1 px2 d-ib"><a href="#" class="text-white font-bold">Nieuws</a></li>
+                        <li class="py1 px2 d-ib"><a href="#" class="text-white font-bold">Evenementen</a></li>
+                        <li class="py1 px2 d-ib"><a href="#" class="text-white font-bold">Kwaliteitshandboek</a></li>
+                    </ul>
+                    <div class="top-search col-4 mx0 f-right">
+                        <form id="header_search" action="/" method="get">
+                            <input type="text" name="q" class="input-field"/>
+                            <button class="btn-icon search" type="submit"></button>
+                        </form>
+                    </div>
+                </nav>
+            </section>
         </header>
         
+
     </div>
 </body>
 </html>

@@ -53,17 +53,48 @@ p {
   line-height: 1.8;
 }
 
-.font-light {
+.font-lighter {
+  font-weight: 100;
+}
+.font-regular {
   font-weight: 300;
 }
-
-.font-regular {
-  font-weight: 400;
+.font-semi-bold {
+  font-weight: 500;
 }
-
-.font-heavy {
+.font-bold {
   font-weight: 700;
 }
+.font-bolder {
+  font-family: 'OpenSansBolder';
+  font-weight: 900;
+}
+
+.font-size-1 {
+  font-size: 1rem;
+}
+.font-size-2 {
+  font-size: 1.275rem;
+}
+.font-size-3 {
+  font-size: 1.5rem;
+  line-height: 1.7rem;
+}
+.font-size-4 {
+  font-size: 1.75rem;
+  line-height: 2rem;
+}
+
+.text-white {
+  color: #fff;
+}
+ol,
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+
 
 /* POSITIONING */
 .t-left {
@@ -107,68 +138,109 @@ p {
   display: inline-block;
 }
 
+/* FLEX */
+.d-f {
+  display: flex;
+}
+.f-align-center {
+  align-items: center;
+}
+.f-align-top {
+  align-items: flex-start;
+}
+.f-align-bottom {
+  align-items: flex-end;
+}
+.f-justify-center {
+  justify-content: center;
+}
+.f-justify-left {
+  justify-content: left;
+}
+.f-justify-right {
+  justify-content: right;
+}
+.flex-item-top {
+  align-self: flex-start;
+}
+.flex-item-center {
+  align-self: center;
+}
+.flex-item-bottom {
+  align-self: flex-end;
+}
+.flex-item-left {
+  justify-self: left;
+}
+.flex-item-center {
+  justify-self: center;
+}
+.flex-item-right {
+  justify-self: right;
+}
+
 /* MARGIN - PADDING */
 .ml3,
 .mx3,
 .m3 {
-  margin-left: 50px;
+  margin-left: 45px;
 }
 .mr3,
 .mx3,
 .m3 {
-  margin-right: 50px;
+  margin-right: 45px;
 }
 .mt3,
 .my3,
 .m3 {
-  margin-top: 50px;
+  margin-top: 45px;
 }
 .mb3,
 .my3,
 .m3 {
-  margin-bottom: 50px;
+  margin-bottom: 45px;
 }
 
 .ml2,
 .mx2,
 .m2 {
-  margin-left: 30px;
+  margin-left: 25px;
 }
 .mr2,
 .mx2,
 .m2 {
-  margin-right: 30px;
+  margin-right: 25px;
 }
 .mt2,
 .my2,
 .m2 {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 .mb2,
 .my2,
 .m2 {
-  margin-bottom: 30px;
+  margin-bottom: 25px;
 }
 
 .ml1,
 .mx1,
 .m1 {
-  margin-left: 15px;
+  margin-left: 10px;
 }
 .mr1,
 .mx1,
 .m1 {
-  margin-right: 15px;
+  margin-right: 10px;
 }
 .mt1,
 .my1,
 .m1 {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 .mb1,
 .my1,
 .m1 {
-  margin-bottom: 15px;
+  margin-bottom: 10px;
 }
 
 .ml0,
@@ -195,64 +267,64 @@ p {
 .pl3,
 .px3,
 .p3 {
-  padding-left: 50px;
+  padding-left: 45px;
 }
 .pr3,
 .px3,
 .p3 {
-  padding-right: 50px;
+  padding-right: 45px;
 }
 .pt3,
 .py3,
 .p3 {
-  padding-top: 50px;
+  padding-top: 45px;
 }
 .pb3,
 .py3,
 .p3 {
-  padding-bottom: 50px;
+  padding-bottom: 45px;
 }
 
 .pl2,
 .px2,
 .p2 {
-  padding-left: 30px;
+  padding-left: 25px;
 }
 .pr2,
 .px2,
 .p2 {
-  padding-right: 30px;
+  padding-right: 25px;
 }
 .pt2,
 .py2,
 .p2 {
-  padding-top: 30px;
+  padding-top: 25px;
 }
 .pb2,
 .py2,
 .p2 {
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 
 .pl1,
 .px1,
 .p1 {
-  padding-left: 15px;
+  padding-left: 10px;
 }
 .pr1,
 .px1,
 .p1 {
-  padding-right: 15px;
+  padding-right: 10px;
 }
 .pt1,
 .py1,
 .p1 {
-  padding-top: 15px;
+  padding-top: 10px;
 }
 .pb1,
 .py1,
 .p1 {
-  padding-bottom: 15px;
+  padding-bottom: 10px;
 }
 
 .pl0,
@@ -302,6 +374,14 @@ a {
 }
 a:hover {
   text-decoration: underline;
+}
+
+/* FORM */
+.input-field {
+  border: 1px solid #d8e2ee;
+  padding: 5px;
+  height: 40px;
+  width: 100%;
 }
 
 @import url('font.css');
