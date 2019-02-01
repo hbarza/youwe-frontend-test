@@ -109,6 +109,10 @@ button {
   line-height: 2rem;
 }
 
+.font-italic {
+  font-style: italic;
+}
+
 .text-white {
   color: #fff;
 }

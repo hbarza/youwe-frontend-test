@@ -34,6 +34,12 @@
 .btn-icon.news {
     background-image: url('../image/newspaper.png')
 }
+.btn-icon.report {
+    background-image: url('../image/kwaliteitshandboek.png')
+}
+.btn-icon.groups {
+    background-image: url('../image/groups.png')
+}
 .btn-icon.arrow-right {
     background-image: url('../image/arrow-right.png')
 }
@@ -113,8 +119,23 @@
 }
 
 /* MAIN AREA */
-.main .container {
-    height: 95vw;
+.kwaliteitshandboek .title {
+    font-size: .7rem;
+    line-height: 1.2rem;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.evenementen .title {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+.direct-naar .title {
+    font-size: 1rem;
+    line-height: 1.2rem;
+    margin-left: 15px;
+    margin-right: 15px;
 }
 
 /* BOX */
@@ -217,6 +238,31 @@
 .microblog .posts img {
     width: 100%;
 }
-.news .content .name {
-    margin-left: 27%;
+
+/** DESKTOP **/
+@media only screen and (min-width: 60em) { /* 960px */
+    .main .container {
+        height: 118vw;
+    }
+    .kwaliteitshandboek .title {
+        font-size: .9rem;
+        line-height: 1.2rem;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .evenementen .title {
+        font-size: .9rem;
+        line-height: 1.2rem;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .direct-naar .title {
+        font-size: .9rem;
+        line-height: 1.2rem;
+        margin-left: 25px;
+        margin-right: 25px;
+    }
+    .news .content .name {
+        margin-left: 27%;
+    }
 }
