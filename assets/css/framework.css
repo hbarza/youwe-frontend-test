@@ -91,9 +91,11 @@ button {
 
 .font-size-0 {
   font-size: .8rem;
+  line-height: 1.1rem;
 }
 .font-size-1 {
   font-size: .9rem;
+  line-height: 1.2rem;
 }
 .font-size-2 {
   font-size: 1.275rem;
@@ -115,8 +117,6 @@ ul {
   list-style: none;
   padding: 0;
 }
-
-
 
 /* POSITIONING */
 .t-left {
@@ -158,6 +158,10 @@ ul {
 
 .d-ib {
   display: inline-block;
+}
+
+.hidden {
+  display: none;
 }
 
 /* FLEX */
@@ -204,12 +208,18 @@ ul {
   justify-self: right;
 }
 
+.flex-column {
+  flex-direction: column; 
+}
+.flex-row {
+  flex-direction: row; 
+}
+
 /* FLEX VERTICAL MASONERY LAYOUT */ 
 .masonry { 
   display: flex; 
   flex-direction: column; 
   flex-wrap: wrap;
-  height: 55vw;
   /* max-height: 800px; */
 }
 /* fallback for earlier versions of Firefox */
