@@ -58,8 +58,8 @@
     color: #333;
 }
 .header .logo img {
-    width: 4.3rem;
-    min-height: 4.2rem;
+    width: auto;
+    min-height: auto;
     margin-right: 5px;
 }
 .header .logo h1 {
@@ -100,6 +100,7 @@
 #header_search .search {
     position: absolute;
     right: 0;
+    top: 0;
     background-image: url('../image/zoeken.png');
     padding: 22px;
 }
@@ -238,11 +239,34 @@
 .microblog .posts img {
     width: 100%;
 }
+.mobile-menu {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+}
+.mobile-menu .btn-icon {
+    font-size: 16px;
+    padding: 10px;
+}
+.page-wrapper > .header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    width: 100%;
+    background-color: #fff;
+    -webkit-box-shadow: 1px 1px 4px rgba(0,0,0,.35);
+       -moz-box-shadow: 1px 1px 4px rgba(0,0,0,.35);
+            box-shadow: 1px 1px 4px rgba(0,0,0,.35);
+}
+.main {
+    margin-top: 65px;
+}
 
 /** DESKTOP **/
 @media only screen and (min-width: 60em) { /* 960px */
     .main .container {
-        height: 118vw;
+        height: 1620px;
     }
     .kwaliteitshandboek .title {
         font-size: .9rem;
@@ -264,5 +288,30 @@
     }
     .news .content .name {
         margin-left: 27%;
+    }
+    .header .logo img {
+        width: 4.3rem;
+        min-height: 4.2rem;
+        margin-right: 5px;
+    }
+    .page-wrapper > .header {
+        position: static;
+        top: auto;
+        left: auto;
+        width: auto;
+        z-index: auto;
+        background-color: transparent;
+        -webkit-box-shadow: none;
+           -moz-box-shadow: none;
+                box-shadow: none;
+    }
+    .main {
+        margin-top: 0;
+    }
+    .nav .menu li {
+        display: inline-block;
+    }
+    .nav .menu li:first-child {
+        padding-left: 0;
     }
 }
