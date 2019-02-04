@@ -232,11 +232,11 @@
     line-height: 20px;
 }
 .icon-like::before {
-    display: block;
+    display: inline-block;
     content: "";
-    float: left;
     width: 30px;
     height: 17px;
+    vertical-align: middle;
     margin-right: 3px;
     background: url('../image/like-icon.png') no-repeat 0 50%;
 }
@@ -264,13 +264,13 @@
             box-shadow: 1px 1px 4px rgba(0,0,0,.35);
 }
 .main {
-    margin-top: 65px;
+    margin-top: 75px;
 }
 
-/** DESKTOP **/
-@media only screen and (min-width: 60em) { /* 960px */
+/** TABLET **/
+@media only screen and (min-width: 992px) {
     .main .container {
-        height: 1620px;
+        height: 2800px;
     }
     .kwaliteitshandboek .title {
         font-size: .9rem;
@@ -289,9 +289,6 @@
         line-height: 1.2rem;
         margin-left: 25px;
         margin-right: 25px;
-    }
-    .news .content .name {
-        margin-left: 27%;
     }
     .header .logo img {
         width: 4.3rem;
@@ -323,5 +320,15 @@
     }
     .header .logo {
         display: flex;
+    }
+}
+
+/** DESKTOP **/
+@media only screen and (min-width: 1200px) {
+    .main .container {
+        height: 1600px;
+    }
+    .news .content .name {
+        margin-left: 27%;
     }
 }

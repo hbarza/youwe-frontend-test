@@ -1,4 +1,5 @@
 /* ==== GRID SYSTEM ==== */
+/* PHONE */
 .container {
   width: 90%;
   margin-left: auto;
@@ -92,13 +93,67 @@
   display: block;
 }
 
-@media only screen and (min-width: 33.75em) {  /* 540px */
+@media only screen and (min-width: 576px) {
   .container {
     width: 80%;
   }
 }
 
-@media only screen and (min-width: 45em) {  /* 720px */
+/* TABLET */
+@media only screen and (min-width: 992px) {
+  .container {
+    width: 90%;
+    max-width: 80rem;
+  }
+
+  .col-1,
+  .col-2,
+  .col-3,
+  .col-4,
+  .col-5,
+  .col-7,
+  .col-8,
+  .col-9,
+  .col-10,
+  .col-11,
+  .col-12 {
+    width: 98%;
+  }
+
+  .col-1-md,
+  .col-2-md,
+  .col-3-md {
+    width: 23%;
+  }
+
+  .col-4-md,
+  .col-5-md,
+  .col-6-md {
+    width: 48%;
+  }
+
+  .col-7-md,
+  .col-8-md,
+  .col-9-md {
+    width: 73%;
+  }
+
+  .col-10-md,
+  .col-11-md,
+  .col-12-md {
+    width: 98%;
+  }
+
+  .hidden-sm {
+    display: block;
+  }
+  .show-sm {
+    display: none;
+  }
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1200px) {
   .col-1 {
     width: 6.33%;
   }
@@ -147,17 +202,4 @@
     width: 98%;
   }
 
-  .hidden-sm {
-    display: block;
-  }
-  .show-sm {
-    display: none;
-  }
-}
-
-@media only screen and (min-width: 60em) { /* 960px */
-  .container {
-    width: 90%;
-    max-width: 80rem;
-  }
 }
