@@ -267,6 +267,16 @@
     margin-top: 75px;
 }
 
+/** CONTACT PAGE **/
+.contact .sidebar {
+    color: #000;
+    background-color: #999;
+    min-height: 50vh;
+}
+.contact .contact-paragraph {
+    line-height: 1.4;
+}
+
 /** TABLET **/
 @media only screen and (min-width: 992px) {
     .main .container {
