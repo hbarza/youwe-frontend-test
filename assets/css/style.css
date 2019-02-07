@@ -209,6 +209,7 @@
 }
 #telefoonboek_search .search {
     position: absolute;
+    top: 0;
     right: 0;
     background: url('../image/zoeken.png') no-repeat 50% 50%;
     padding: 22px;
@@ -268,18 +269,54 @@
 }
 
 /** CONTACT PAGE **/
+#contact_page {
+    color: #000;
+}
 .contact .sidebar {
     color: #000;
     background-color: #999;
-    min-height: 50vh;
+    height: 100%;
+}
+.contact .main > .container {
+    height: 67vh;
 }
 .contact .contact-paragraph {
     line-height: 1.4;
 }
+.field-wrapper {
+    margin-bottom: 15px;
+}
+#contact_form .input-field,
+#contact_form .textarea-field {
+    border: 2px solid #000;
+    height: 35px;
+    padding: 7px 15px;
+    font-family: 'OpenSans', Helvetica, sans-serif;
+    -webkit-border-radius: 18px;
+       -moz-border-radius: 18px;
+            border-radius: 18px;
+}
+#contact_form .textarea-field {
+    height: 200px;
+}
+#contact_form .description-label {
+    vertical-align: top;
+}
+.submit-btn {
+    padding: 5px 70px;
+    background-color: #000;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: bold;
+    border: 1px solid #000;
+    -webkit-border-radius: 20px;
+       -moz-border-radius: 20px;
+            border-radius: 20px;
+}
 
 /** TABLET **/
 @media only screen and (min-width: 992px) {
-    .main .container {
+    .home .main .container {
         height: 2800px;
     }
     .kwaliteitshandboek .title {
@@ -335,7 +372,7 @@
 
 /** DESKTOP **/
 @media only screen and (min-width: 1200px) {
-    .main .container {
+    .home .main .container {
         height: 1600px;
     }
     .news .content .name {

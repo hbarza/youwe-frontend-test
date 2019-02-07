@@ -36,6 +36,9 @@ body {
 .outline {
   outline: 1px solid red;
 }
+:focus {
+  outline: 0 none;
+}
 
 /* TYPOGRAPHY */
 h1 {
