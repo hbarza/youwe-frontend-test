@@ -44,6 +44,12 @@
     background-image: url('../image/arrow-right.png')
 }
 
+.success {
+    color: #155724;
+    background-color: #d4edda;
+    border: 1px solid #c3e6cb;
+}
+
 /* HEADER */
 .top-links .link {
     font-size: .9rem;
@@ -299,7 +305,8 @@
 #contact_form .textarea-field {
     height: 200px;
 }
-#contact_form .description-label {
+/* #contact_form .description-label { */
+.field-wrapper label {
     vertical-align: top;
 }
 .submit-btn {
@@ -312,6 +319,14 @@
     -webkit-border-radius: 20px;
        -moz-border-radius: 20px;
             border-radius: 20px;
+}
+#contact_form .input-field.invalid,
+#contact_form .textarea-field.invalid {
+    border-color: red;
+}
+#contact_form .input-field.valid,
+#contact_form .textarea-field.valid {
+    border-color: green;
 }
 
 /** TABLET **/

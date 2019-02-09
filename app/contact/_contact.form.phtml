@@ -1,19 +1,27 @@
-<form id="contact_form" action="" method="post">
+<form id="contact_form" action="/?success=true" method="post">
     <div class="field-wrapper col-12">
         <label class="col-2 d-ib font-bold name-label" for="name">Naam: </label>
-        <input type="text" name="name" class="input-field col-3"/>
+        <div class="element-wrapper col-3 d-ib">
+            <input type="text" name="name" class="input-field" data-validation="required minlength-3"/>
+        </div>
     </div>
     <div class="field-wrapper col-12">
         <label class="col-2 d-ib font-bold email-label" for="email">Email: </label>
-        <input type="text" name="email" class="input-field col-3"/>
+        <div class="element-wrapper col-3 d-ib">
+            <input type="text" name="email" class="input-field" data-validation="required email"/>
+        </div>
     </div>
     <div class="field-wrapper col-12">
         <label class="col-2 d-ib font-bold subject-label" for="subject">Onderwerp: </label>
-        <input type="text" name="subject" class="input-field col-3"/>
+        <div class="element-wrapper col-3 d-ib">
+            <input type="text" name="subject" class="input-field" data-validation="betweenlength-3-255"/>
+        </div>
     </div>
     <div class="field-wrapper col-12">
         <label class="col-2 d-ib font-bold description-label" for="description">Bericht: </label>
-        <textarea type="text" name="description" class="textarea-field col-10"></textarea>
+        <div class="element-wrapper col-10 d-ib">
+            <textarea type="text" name="description" class="textarea-field col-12" data-validation="required maxlength-1024"></textarea>
+        </div>
     </div>
     <div class="field-wrapper col-12 t-right mt2">
         <button class="submit-btn mr2" type="submit">Verstuur</button>

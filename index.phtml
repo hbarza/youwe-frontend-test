@@ -13,6 +13,12 @@
     <div class="page-wrapper">
         <?php include('app/header.phtml') ?>
 
+        <?php if(isset($_GET['success']) && $_GET['success'] === 'true'): ?>
+        <div class="container row success m2 p1">
+            <div class="col-12">Congratulation, your contact form was valid!</div>
+        </div>
+        <?php endif; ?>
+
         <!-- <<< Main Area -->
         <section class="main">
             <div class="container row masonry">
@@ -32,8 +38,11 @@
         </section>
         <!-- >>> Main Area -->
         
-        <footer class="m3"></footer>
+        <footer class="m3">
+            <?php include('app/footer.phtml') ?>
+        </footer>
     </div>
     <!-- >>> Page Wrapper -->
+    <?php include('app/body_end.phtml') ?>
 </body>
 </html>

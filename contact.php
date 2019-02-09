@@ -22,8 +22,11 @@
         </section>
         <!-- >>> Main Area -->
         
-        <footer class="m3"></footer>
+        <footer class="m3">
+            <?php include('app/footer.phtml') ?>
+        </footer>
     </div>
     <!-- >>> Page Wrapper -->
+    <?php include('app/body_end.phtml') ?>
 </body>
 </html>

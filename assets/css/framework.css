@@ -447,5 +447,9 @@ a:hover {
 .text-area {
   height: 200px;
 }
+.error {
+  color: red;
+  font-size: .75rem;
+}
 
 @import url('font.css');
