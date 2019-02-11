@@ -33,7 +33,7 @@ validator = function()
                 || (element.type == 'button');
             if (skipCondition) continue;
             if (element.type == 'text' || element.type == 'textarea') {
-                isValid = validator.validateText(element);
+                isValid = validator.validateText(element) && isValid;
             }
             // @todo add other validators for other form elements here
         }
@@ -55,7 +55,9 @@ validator = function()
         var validationConditions = element.getAttribute('data-validation').split(' ');
         for(var i = 0; i < validationConditions.length; i++) {
             var functionName = validationConditions[i].split('-')[0].toLowerCase();
-            if (!exec(functionName, validator, element)) {
+            var execution    = exec(functionName, validator, element);
+            if (execution === undefined) continue;
+            if (!execution) {
                 validator.removeClass(element, 'valid');
                 validator.addClass(element, 'invalid');
                 result = false;
@@ -150,7 +152,15 @@ validator = function()
      */
     this.minlength = function (element)
     {
-        // alert('min');
+        if (element.value == '') {
+            return;
+        }
+        params = this.getLengthParams(element);
+        var result = element.value.length >= params[1];
+        !result 
+            ? this.addError(element, 'Min valid length is ' + params[1]) 
+            : this.removeError(element);
+        return result;
     };
 
     /**
@@ -161,7 +171,15 @@ validator = function()
      */
     this.betweenlength = function (element)
     {
-        // alert('between');
+        if (element.value == '') {
+            return;
+        }
+        params = this.getLengthParams(element);
+        var result = (element.value.length >= params[1]) && (element.value.length <= params[2]);
+        !result 
+            ? this.addError(element, 'Length must be between ' + params[1] + ' and ' + params[2]) 
+            : this.removeError(element);
+        return result;
     };
 
     this.getLengthParams = function (element)
