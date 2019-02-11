@@ -436,6 +436,13 @@ a:hover {
   text-decoration: underline;
 }
 
+.show {
+  display: block !important;
+}
+.hide {
+  display: none !important;
+}
+
 /* FORM */
 .input-field,
 .text-area {

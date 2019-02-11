@@ -1,4 +1,4 @@
-(function(validator){
+(function(codnitive, validator){
 
     'use strict';
 
@@ -8,4 +8,8 @@
      */
     var validator = new validator();
     validator._init('#contact_form .submit-btn', 'validate', $('.contact #contact_form'));
-}(validator));
+
+    onClick('.mobile-menu .btn-icon.fa-bars', 'toggleMenu', codnitive, $('.nav'));
+    onClick('.mobile-menu .btn-icon.fa-search', 'toggleSearch', codnitive, $('.nav'));
+    onClick('.mobile-menu .btn-icon.fa-link', 'toggleTopLinks', codnitive, $('.header-top'));
+}(codnitive, validator));

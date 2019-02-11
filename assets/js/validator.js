@@ -58,13 +58,13 @@ validator = function()
             var execution    = exec(functionName, validator, element);
             if (execution === undefined) continue;
             if (!execution) {
-                validator.removeClass(element, 'valid');
-                validator.addClass(element, 'invalid');
+                codnitive.removeClass(element, 'valid');
+                codnitive.addClass(element, 'invalid');
                 result = false;
             }
             else {
-                validator.removeClass(element, 'invalid');
-                validator.addClass(element, 'valid');
+                codnitive.removeClass(element, 'invalid');
+                codnitive.addClass(element, 'valid');
                 validator.removeError(element);
             }
         }
@@ -194,33 +194,6 @@ validator = function()
         }
         return false;
     }
-
-    /**
-     * Add new class name to element class porperty
-     * 
-     * @param {object} element
-     * @param {string} className
-     * @return {self}
-     */
-    this.addClass = function (element, className)
-    {
-        this.removeClass(element, className);
-        element.className = element.className + ' ' + className;
-        return this;
-    };
-
-    /**
-     * Add new class name to element class porperty
-     * 
-     * @param {object} element
-     * @param {string} className
-     * @return {self}
-     */
-    this.removeClass = function (element, className)
-    {
-        element.className = element.className.replace(className, '').replace(/  +/g, ' ').trim();
-        return this;
-    };
 
     /**
      * Add error message to form field
