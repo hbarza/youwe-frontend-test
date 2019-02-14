@@ -1,4 +1,4 @@
-(function(codnitive, validator){
+(function(codnitive, validator, accordion){
 
     'use strict';
 
@@ -12,4 +12,12 @@
     onClick('.mobile-menu .btn-icon.fa-bars', 'toggleMenu', codnitive, $('.nav'));
     onClick('.mobile-menu .btn-icon.fa-search', 'toggleSearch', codnitive, $('.nav'));
     onClick('.mobile-menu .btn-icon.fa-link', 'toggleTopLinks', codnitive, $('.header-top'));
-}(codnitive, validator));
+
+    /**
+     * Home Accordion initialization
+     * 
+     */
+    var accordion = new accordion(true);
+    accordion._init('.accordion');
+
+}(codnitive, validator, accordion));

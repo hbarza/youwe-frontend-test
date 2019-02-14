@@ -459,4 +459,13 @@ a:hover {
   font-size: .75rem;
 }
 
+.height-0 {
+  overflow: hidden;
+  height: 0 !important;
+  -webkit-transition: height 1.5s;
+     -moz-transition: height 1.5s;
+       -o-transition: height 1.5s;
+          transition: height 1.5s;
+}
+
 @import url('font.css');

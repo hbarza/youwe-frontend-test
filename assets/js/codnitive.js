@@ -16,8 +16,7 @@ codnitive =
      */
     addClass: function (element, className)
     {
-        this.removeClass(element, className);
-        element.className = element.className + ' ' + className;
+        element.classList.add(className);
         return this;
     },
 
@@ -30,7 +29,7 @@ codnitive =
      */
     removeClass: function (element, className)
     {
-        element.className = element.className.replace(className, '').replace(/  +/g, ' ').trim();
+        element.classList.remove(className);
         return this;
     },
 
@@ -43,7 +42,7 @@ codnitive =
      */
     hasClass: function (element, className)
     {
-        return element.className.match(className);
+        return element.classList.contains(className);
     },
 
     /**
@@ -53,6 +52,7 @@ codnitive =
      */
     toggle: function(element)
     {
+        // return element.classList.toggle('show');
         if (codnitive.hasClass(element, 'show')) {
             codnitive.removeClass(element, 'show');
             codnitive.addClass(element, 'hide');
