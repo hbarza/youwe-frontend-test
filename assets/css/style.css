@@ -177,12 +177,7 @@
 }
 .box .content,
 .accordion .accordion-content {
-    height: 150px;
     color: #677088;
-    -webkit-transition: height 1.5s;
-       -moz-transition: height 1.5s;
-         -o-transition: height 1.5s;
-            transition: height 1.5s;
 }
 .box .content li {
     border-bottom: 1px solid #dbe3ed;
@@ -206,6 +201,7 @@
 .accordion .accordion-header {
     background-color: #eaeff4;
     border-bottom: 1px solid #d8e2ee;
+    cursor: pointer;
 }
 .accordion .accordion-header.active,
 .accordion .accordion-header:hover {

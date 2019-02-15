@@ -10,9 +10,9 @@ codnitive =
     /**
      * Add new class name to element class porperty
      * 
-     * @param {object} element
+     * @param {Element} element
      * @param {string} className
-     * @return {self}
+     * @returns {self}
      */
     addClass: function (element, className)
     {
@@ -23,9 +23,9 @@ codnitive =
     /**
      * Add new class name to element class porperty
      * 
-     * @param {object} element
+     * @param {Element} element
      * @param {string} className
-     * @return {self}
+     * @returns {self}
      */
     removeClass: function (element, className)
     {
@@ -36,9 +36,9 @@ codnitive =
     /**
      * Checks element has specific class name or not
      * 
-     * @param {object} element
+     * @param {Element} element
      * @param {string} className
-     * @return {bool}
+     * @returns {bool}
      */
     hasClass: function (element, className)
     {
@@ -47,8 +47,8 @@ codnitive =
 
     /**
      * 
-     * @param {object} element 
-     * @return {string} show|hide
+     * @param {Element} element 
+     * @returns {string} show|hide
      */
     toggle: function(element)
     {
@@ -68,7 +68,7 @@ codnitive =
     /**
      * Toggle mobile menu
      * 
-     * @param {object} element 
+     * @param {Element} element 
      */
     toggleMenu: function (element)
     {
@@ -90,7 +90,7 @@ codnitive =
     /**
      * Toggle mobile search bar
      * 
-     * @param {object} element 
+     * @param {Element} element 
      */
     toggleSearch: function (element)
     {
@@ -112,7 +112,7 @@ codnitive =
     /**
      * Toggle top links in header
      * 
-     * @param {object} element 
+     * @param {Element} element 
      */
     toggleTopLinks: function (element)
     {

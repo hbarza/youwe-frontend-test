@@ -4,8 +4,21 @@
  * @author Omid Barza <hbarza@gmail.com>
  */
 
-accordion = function(openFirst, autoClose) 
+accordion = function(accordionSelector, openFirst, autoClose) 
 {
+    /**
+     * Accordion object
+     * 
+     * @var {Element}
+     */
+    this.accordion = $(accordionSelector);
+
+    /**
+     * Accordion slide animation speed
+     * 
+     * @var {int}
+     */
+    this.animationTime = 350;
 
     /**
      * Defines first element of accordion is opened automatically when creating accordion
@@ -24,11 +37,10 @@ accordion = function(openFirst, autoClose)
     /**
      * Create and initilize accordion
      * 
-     * @param {string} accordion
      */
-    this._init = function (accordion)
+    this._init = function ()
     {
-        var items = $(accordion).querySelectorAll('.accordion-item');
+        var items = this.accordion.querySelectorAll('.accordion-item');
         for (var i = 0; i < items.length; i++) {
             var header  = items[i].querySelector('.accordion-header');
             var content = items[i].querySelector('.accordion-content');
@@ -46,18 +58,91 @@ accordion = function(openFirst, autoClose)
             codnitive.addClass(header, 'inactive');
             codnitive.addClass(header.querySelector('.btn-icon'), 'arrow-right')
                 .removeClass(header.querySelector('.btn-icon'), 'arrow-down');
-            codnitive.addClass(content, 'hide');
-            codnitive.addClass(content, 'height-0');
         }
     };
 
+    /**
+     * Toggle accordion when click on header
+     * 
+     * @param {string} header
+     * @returns undefined
+     */
     this.toggle = function (header)
     {
+        header = $(header);
+        var content = $(header.getAttribute('data-content'));
+        var arrow   = header.querySelector('.btn-icon');
+
         // @reference https://gomakethings.com/how-to-add-transition-animations-to-vanilla-javascript-show-and-hide-methods/
-        var content = $($(header).getAttribute('data-content'));
-        codnitive.removeClass(content, 'hide');
-        codnitive.hasClass(content, 'height-0') 
-            ? codnitive.removeClass(content, 'height-0')
-            : codnitive.addClass(content, 'height-0');
+        if (codnitive.hasClass(content, 'show')) {
+            codnitive.removeClass(header, 'active');
+            codnitive.addClass(header, 'inactive');
+            
+            codnitive.removeClass(arrow, 'arrow-down');
+            codnitive.addClass(arrow, 'arrow-right');
+
+            this.slideUp(content);
+            return;
+        }
+        if (this.autoClose) {
+            var activeAccordionItem = this.accordion.querySelector('.accordion-header.active');
+            if (null !== activeAccordionItem) {
+                triggerClick(this.accordion.querySelector('.accordion-header.active'));
+            }
+        }
+        codnitive.removeClass(header, 'inactive');
+        codnitive.addClass(header, 'active');
+            
+        codnitive.removeClass(arrow, 'arrow-right');
+        codnitive.addClass(arrow, 'arrow-down');
+
+        this.slideDown(content);
     };
+
+    /**
+     * Slide down accordion to show content
+     * 
+     * @param {Element} element
+     * @returns void
+     */
+    this.slideDown = function (element)
+    {
+        element.style.height = this.getHeight(element);
+        codnitive.addClass(element, 'show');
+
+        window.setTimeout(function () {
+            element.style.height = '';
+        }, this.animationTime);
+    }
+
+    /**
+     * Slide up accordion to hide content
+     * 
+     * @param {Element} element
+     * @returns void
+     */
+    this.slideUp = function (element)
+    {
+        element.style.height = element.scrollHeight + 'px';
+        window.setTimeout(function () {
+            element.style.height = '0';
+        }, 1);
+        window.setTimeout(function () {
+            codnitive.removeClass(element, 'show');
+        }, this.animationTime);
+    };
+
+    /**
+     * Retrives accordion content height
+     * 
+     * @param {Element} element
+     * @returns string
+     */
+    this.getHeight = function (element)
+    {
+        element.style.display = 'block';
+		var height = element.scrollHeight + 'px';
+		element.style.display = '';
+		return height;
+    }
 }

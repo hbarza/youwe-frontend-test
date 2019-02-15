@@ -459,13 +459,18 @@ a:hover {
   font-size: .75rem;
 }
 
-.height-0 {
-  overflow: hidden;
-  height: 0 !important;
-  -webkit-transition: height 1.5s;
-     -moz-transition: height 1.5s;
-       -o-transition: height 1.5s;
-          transition: height 1.5s;
+.accordion-content {
+	display: none;
+	height: 0;
+	overflow: hidden;
+	-webkit-transition: height 350ms ease-in-out;
+	   -moz-transition: height 350ms ease-in-out;
+	     -o-transition: height 350ms ease-in-out;
+	        transition: height 350ms ease-in-out;
+}
+.accordion-content.show {
+	display: block;
+	height: auto;
 }
 
 @import url('font.css');

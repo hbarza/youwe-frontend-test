@@ -17,7 +17,7 @@
      * Home Accordion initialization
      * 
      */
-    var accordion = new accordion(true);
-    accordion._init('.accordion');
+    var accordion = new accordion('.accordion', true, true);
+    accordion._init();
 
 }(codnitive, validator, accordion));

@@ -11,7 +11,7 @@ validator = function()
      * 
      * @param {string} button
      * @param {string} callback
-     * @param {object} formElement
+     * @param {Element} formElement
      */
     this._init = function(button, callback, formElement)
     {
@@ -21,7 +21,7 @@ validator = function()
     /**
      * Validates form object
      * 
-     * @param {object} formObject
+     * @param {Element} formObject
      */
     this.validate = function (formObject)
     {
@@ -45,8 +45,8 @@ validator = function()
     /**
      * Validates form text and textarea fields
      * 
-     * @param {object} element
-     * @return {bool}
+     * @param {Element} element
+     * @returns {bool}
      */
     this.validateText = function (element)
     {
@@ -90,8 +90,8 @@ validator = function()
     /**
      * Check field element for requrired value
      * 
-     * @param {object} element
-     * @return {bool}
+     * @param {Element} element
+     * @returns {bool}
      */
     this.required = function (element)
     {
@@ -108,8 +108,8 @@ validator = function()
     /**
      * Checks field value is a valid email address
      * 
-     * @param {object} element
-     * @return {bool}
+     * @param {Element} element
+     * @returns {bool}
      */
     this.email = function (element)
     {
@@ -128,8 +128,8 @@ validator = function()
     /**
      * Validates value max length
      * 
-     * @param {object} element
-     * @return {bool}
+     * @param {Element} element
+     * @returns {bool}
      */
     this.maxlength = function (element)
     {
@@ -147,8 +147,8 @@ validator = function()
     /**
      * Validates value min length
      * 
-     * @param {object} element
-     * @return {bool}
+     * @param {Element} element
+     * @returns {bool}
      */
     this.minlength = function (element)
     {
@@ -166,8 +166,8 @@ validator = function()
     /**
      * Validates value is between min and max length
      * 
-     * @param {object} element
-     * @return {bool}
+     * @param {Element} element
+     * @returns {bool}
      */
     this.betweenlength = function (element)
     {
@@ -200,7 +200,7 @@ validator = function()
      * 
      * @param {objec} element
      * @param {string} message
-     * @return {self}
+     * @returns {self}
      */
     this.addError = function (element, message)
     {
@@ -220,8 +220,8 @@ validator = function()
     /**
      * Remove error message block
      * 
-     * @param {object} element
-     * @return {self}
+     * @param {Element} element
+     * @returns {self}
      */
     this.removeError = function (element)
     {
