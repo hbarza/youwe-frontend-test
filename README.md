@@ -69,4 +69,4 @@ You should make a copy from `nginx-local.conf-SMPL` to `nginx-local.conf` and co
 
 
 **NOTES:**
-- For access to contact form page you must go to `/contact.php` address (Example: http://curanu.loc/contact.php)
+- For access to contact form page you must go to `/contact.php` address (Example: http://youwe.fe.cooode.run/contact.php)
