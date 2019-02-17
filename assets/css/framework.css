@@ -193,6 +193,12 @@ ul {
 .f-justify-right {
   justify-content: right;
 }
+.f-justify-start {
+  justify-content: start;
+}
+.f-justify-end {
+  justify-content: end;
+}
 .f-justify-between {
   justify-content: space-between;
 }
@@ -213,6 +219,12 @@ ul {
 }
 .flex-item-right {
   justify-self: right;
+}
+.flex-item-start {
+  justify-self: start;
+}
+.flex-item-end {
+  justify-self: end;
 }
 
 .flex-column {
